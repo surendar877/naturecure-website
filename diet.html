@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healing Diet — NatureCure</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-leaf">✦</span> NatureCure</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="herbs.html">Herbs</a></li>
+        <li><a href="remedies.html">Remedies</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="diet.html" class="active">Diet</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-tag">Let Food Be Thy Medicine</p>
+    <h1>Healing Foods & Diet Plans</h1>
+    <p>Condition-specific anti-inflammatory diets, superfoods and meal strategies that heal from within</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="diabetes">Diabetes</button>
+    <button class="filter-btn" data-filter="bp">Heart & BP</button>
+    <button class="filter-btn" data-filter="gut">Gut Health</button>
+    <button class="filter-btn" data-filter="inflammation">Anti-Inflammatory</button>
+    <button class="filter-btn" data-filter="immunity">Immunity</button>
+    <button class="filter-btn" data-filter="skin">Skin & Hair</button>
+    <button class="filter-btn" data-filter="weight">Weight Loss</button>
+  </div>
+
+  <div class="container section" style="padding-top:0">
+    <div class="remedies-grid" id="dietGrid"></div>
+  </div>
+
+  <div class="disclaimer-bar">
+    <div class="container">
+      <p>⚠️ <strong>Disclaimer:</strong> Dietary advice is informational. Consult a nutritionist or doctor before making major dietary changes, especially for serious conditions.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo">✦ NatureCure</div><p>Bringing ancient healing wisdom to the modern world.</p></div>
+        <div class="footer-col"><h4>Pages</h4><ul>
+          <li><a href="herbs.html">Herbs</a></li><li><a href="remedies.html">Remedies</a></li>
+          <li><a href="exercises.html">Exercises</a></li><li><a href="diet.html">Diet</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="contact.html">Contact</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 NatureCure. Made with 🌿 for a healthier world.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const diets = [
+      { icon:'🩸', title:'Diabetic Healing Diet', condition:'Type 2 Diabetes', category:'diabetes', desc:'Focus on low-glycemic foods that release sugar slowly. Eliminate refined sugar and white rice. Eat small meals every 3 hours. This diet has reversed Type 2 diabetes in clinical trials.', foods:['Bitter Gourd','Methi Leaves','Brown Rice','Chickpeas','Amla','Cinnamon','Berries','Walnuts'] },
+      { icon:'🫀', title:'Heart-Healthy Diet', condition:'High Blood Pressure & Cholesterol', category:'bp', desc:'DASH-style diet with Indian ingredients. High in potassium, magnesium and fibre. Eliminates salt, fried food and red meat. Reduces BP by 10–15 points in 2 weeks.', foods:['Banana','Coconut Water','Flaxseeds','Pomegranate','Garlic','Oats','Spinach','Chia Seeds'] },
+      { icon:'🌿', title:'Anti-Inflammatory Diet', condition:'Arthritis, Joint Pain & Chronic Inflammation', category:'inflammation', desc:'Eliminate inflammatory foods: sugar, refined oil, processed food. Load up on omega-3 rich foods and colorful vegetables. Reduces CRP (inflammation marker) by 40% in 30 days.', foods:['Turmeric','Ginger','Fatty Fish','Walnuts','Blueberries','Olive Oil','Leafy Greens','Broccoli'] },
+      { icon:'🦠', title:'Gut Healing Protocol', condition:'IBS, Bloating & Leaky Gut', category:'gut', desc:'Heal your gut lining in 4 weeks. Introduce fermented foods, remove gut irritants, take prebiotic fibres. 90% of serotonin is made in the gut — heal your gut, heal your mind.', foods:['Curd/Yoghurt','Kefir','Idli & Dosa','Banana','Jeera Water','Ghee','Ginger Tea','Papaya'] },
+      { icon:'🛡️', title:'Immunity Boosting Diet', condition:'Weak Immunity & Frequent Illness', category:'immunity', desc:'Load up on vitamin C, zinc and antioxidants. Eat a rainbow of fruits and vegetables daily. Include immune superfoods and avoid sugar which suppresses immune function.', foods:['Amla','Tulsi','Moringa','Garlic','Ginger','Turmeric','Sunflower Seeds','Citrus Fruits'] },
+      { icon:'✨', title:'Skin Glow Diet', condition:'Acne, Dull Skin & Hair Fall', category:'skin', desc:'Your skin is a reflection of your gut and liver. Clear your gut, reduce dairy and sugar, increase collagen-boosting foods. Most skin problems clear in 60 days with diet alone.', foods:['Amla','Cucumber','Coconut Water','Pumpkin Seeds','Sweet Potato','Tomato','Flaxseeds','Carrot'] },
+      { icon:'⚖️', title:'Natural Weight Loss Diet', condition:'Obesity & Weight Management', category:'weight', desc:'No crash diets. Intermittent fasting (16:8) combined with a high-fibre, low-sugar Indian diet. Boosts metabolism naturally. Lose 4–6 kg per month sustainably.', foods:['Moong Dal','Cucumber','Green Tea','Ghee (in moderation)','Millets','Drumstick','Coconut','Buttermilk'] },
+      { icon:'🧠', title:'Brain & Mental Health Diet', condition:'Brain Fog, Depression & Memory', category:'immunity', desc:'Your brain is 60% fat — feed it right. Omega-3, B vitamins and magnesium are essential for mental health. This diet boosts serotonin, dopamine and brain-derived neurotrophic factor.', foods:['Walnuts','Fatty Fish','Dark Chocolate','Eggs','Ashwagandha','Blueberries','Turmeric Latte','Pumpkin Seeds'] },
+    ];
+
+    const grid = document.getElementById('dietGrid');
+    diets.forEach(d => {
+      grid.innerHTML += `
+        <div class="diet-card" data-category="${d.category}">
+          <div class="d-icon">${d.icon}</div>
+          <p class="remedy-condition">${d.condition}</p>
+          <h3>${d.title}</h3>
+          <p>${d.desc}</p>
+          <div class="food-list">${d.foods.map(f=>`<span>${f}</span>`).join('')}</div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

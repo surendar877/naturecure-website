@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Herbs & Plants — NatureCure</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-leaf">✦</span> NatureCure</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="herbs.html" class="active">Herbs</a></li>
+        <li><a href="remedies.html">Remedies</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="diet.html">Diet</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-tag">Ancient Wisdom</p>
+    <h1>Herbs & Healing Plants</h1>
+    <p>50+ herbs explained with benefits, dosage, preparation methods and scientific backing</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All Herbs</button>
+    <button class="filter-btn" data-filter="ayurveda">Ayurveda</button>
+    <button class="filter-btn" data-filter="immunity">Immunity</button>
+    <button class="filter-btn" data-filter="stress">Stress & Sleep</button>
+    <button class="filter-btn" data-filter="digestion">Digestion</button>
+    <button class="filter-btn" data-filter="skin">Skin & Hair</button>
+    <button class="filter-btn" data-filter="diabetes">Diabetes</button>
+  </div>
+
+  <div class="container section" style="padding-top:0">
+    <div class="remedies-grid" id="herbsGrid"></div>
+  </div>
+
+  <div class="disclaimer-bar">
+    <div class="container">
+      <p>⚠️ <strong>Disclaimer:</strong> All content is for informational purposes only. Always consult a doctor before starting any herbal treatment, especially if you take medications.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">✦ NatureCure</div>
+          <p>Bringing ancient healing wisdom to the modern world.</p>
+        </div>
+        <div class="footer-col"><h4>Pages</h4><ul>
+          <li><a href="herbs.html">Herbs</a></li>
+          <li><a href="remedies.html">Remedies</a></li>
+          <li><a href="exercises.html">Exercises</a></li>
+          <li><a href="diet.html">Diet</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 NatureCure. Made with 🌿 for a healthier world.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const herbs = [
+      { id:'ashwagandha', emoji:'🌿', name:'Ashwagandha', latin:'Withania somnifera', category:'stress ayurveda', uses:['Stress','Anxiety','Testosterone','Strength','Sleep'], desc:'One of the most important herbs in Ayurveda. Proven to reduce cortisol by 27%, improve strength and lower anxiety.', dosage:'300–500mg extract or 1 tsp root powder in warm milk at night.' },
+      { id:'tulsi', emoji:'🌱', name:'Tulsi (Holy Basil)', latin:'Ocimum sanctum', category:'immunity ayurveda', uses:['Immunity','Cold','Fever','Stress','Skin'], desc:'The Queen of Herbs. Powerful adaptogen and antimicrobial. Boosts immunity and fights infections naturally.', dosage:'10–12 fresh leaves daily or 2 cups of tulsi tea.' },
+      { id:'neem', emoji:'🌳', name:'Neem', latin:'Azadirachta indica', category:'skin ayurveda diabetes', uses:['Skin','Blood Sugar','Dental','Infections','Acne'], desc:'Neem is nature\'s antibiotic. 130+ compounds found in neem fight bacteria, fungi and viruses. Excellent for skin.', dosage:'4–5 neem leaves daily on empty stomach. Neem tea or oil for skin.' },
+      { id:'giloy', emoji:'🪴', name:'Giloy', latin:'Tinospora cordifolia', category:'immunity ayurveda', uses:['Immunity','Fever','Dengue','Digestion','Diabetes'], desc:'Called Amrita (nectar of immortality) in Ayurveda. Proven to enhance white blood cells and fight chronic fever.', dosage:'30ml giloy juice or 1 tsp giloy powder with honey twice daily.' },
+      { id:'turmeric', emoji:'💛', name:'Turmeric', latin:'Curcuma longa', category:'ayurveda digestion skin', uses:['Inflammation','Joint Pain','Immunity','Skin','Brain'], desc:'Curcumin in turmeric is one of the most studied natural anti-inflammatories. Take with black pepper for 2000% better absorption.', dosage:'1/2 tsp turmeric + pinch black pepper in warm milk daily.' },
+      { id:'ginger', emoji:'🫚', name:'Ginger', latin:'Zingiber officinale', category:'digestion immunity', uses:['Nausea','Digestion','Cold','Inflammation','Pain'], desc:'Anti-nausea, anti-inflammatory and immune-boosting. Ginger contains gingerol — a powerful medicinal compound.', dosage:'1 inch fresh ginger in tea or chewed raw. 2–3x daily.' },
+      { id:'amla', emoji:'🟢', name:'Amla (Indian Gooseberry)', latin:'Phyllanthus emblica', category:'immunity skin ayurveda', uses:['Vitamin C','Hair','Immunity','Liver','Eyes'], desc:'Richest natural source of Vitamin C. 20x more than orange. Strengthens hair roots, liver and immunity.', dosage:'1 fresh amla daily or 2 tsp amla powder with honey every morning.' },
+      { id:'fenugreek', emoji:'🌾', name:'Fenugreek (Methi)', latin:'Trigonella foenum-graecum', category:'diabetes digestion', uses:['Diabetes','Cholesterol','Breastfeeding','Digestion','Hair'], desc:'Fenugreek seeds slow sugar absorption and improve insulin function. A must for diabetes management naturally.', dosage:'1 tsp seeds soaked overnight, eaten on empty stomach. Or methi water.' },
+      { id:'moringa', emoji:'🌿', name:'Moringa', latin:'Moringa oleifera', category:'immunity skin', uses:['Nutrition','Energy','Skin','Blood Sugar','Inflammation'], desc:'Called the Miracle Tree — contains 92 nutrients, 46 antioxidants. Most nutrient-dense plant on earth.', dosage:'1 tsp moringa powder in smoothie or water daily.' },
+      { id:'brahmi', emoji:'🍃', name:'Brahmi', latin:'Bacopa monnieri', category:'stress ayurveda', uses:['Memory','Focus','Anxiety','ADHD','Brain'], desc:'Used for millennia in Ayurveda to enhance brain function. Clinically proven to improve memory and reduce anxiety.', dosage:'300mg Bacopa extract or 1 tsp brahmi powder in warm milk before sleep.' },
+      { id:'noni', emoji:'🍈', name:'Karela (Bitter Gourd)', latin:'Momordica charantia', category:'diabetes', uses:['Diabetes','Blood Sugar','Liver','Immunity','Weight'], desc:'Contains polypeptide-p that works like insulin. Studies show it reduces blood glucose as effectively as some medications.', dosage:'50–100ml karela juice on empty stomach. Or eat 1 karela daily.' },
+      { id:'triphala', emoji:'🫙', name:'Triphala', latin:'Three-fruit blend', category:'digestion ayurveda', uses:['Digestion','Constipation','Detox','Eye Health','Immunity'], desc:'A blend of Amla, Bibhitaki and Haritaki. The ultimate digestive tonic in Ayurveda. Gently cleanses and restores gut.', dosage:'1 tsp in warm water before bed. Start with small doses.' },
+    ];
+
+    const herbGrid = document.getElementById('herbsGrid');
+    herbs.forEach(h => {
+      herbGrid.innerHTML += `
+        <div class="herb-card" data-category="${h.category}" id="${h.id}">
+          <div class="herb-emoji">${h.emoji}</div>
+          <h3>${h.name}</h3>
+          <p class="latin">${h.latin}</p>
+          <p>${h.desc}</p>
+          <div class="herb-uses">${h.uses.map(u => `<span>${u}</span>`).join('')}</div>
+          <div class="dosage-box"><strong>Dosage:</strong> ${h.dosage}</div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

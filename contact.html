@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — NatureCure</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-leaf">✦</span> NatureCure</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="herbs.html">Herbs</a></li>
+        <li><a href="remedies.html">Remedies</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="diet.html">Diet</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-tag">Get In Touch</p>
+    <h1>Contact NatureCure</h1>
+    <p>Have a question about a remedy? Want to share your healing story? We'd love to hear from you.</p>
+  </div>
+
+  <div class="contact-wrap">
+    <div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:28px;margin-bottom:24px;">Send Us a Message</h2>
+      <div id="formSuccess" style="display:none;background:#D8F3DC;color:#1B4332;padding:14px 20px;border-radius:12px;margin-bottom:16px;font-size:14px;"></div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="cname" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <select>
+          <option value="" disabled selected>I have a question about...</option>
+          <option>A specific herb</option>
+          <option>A home remedy</option>
+          <option>A health condition</option>
+          <option>Diet advice</option>
+          <option>Yoga or exercise</option>
+          <option>Something else</option>
+        </select>
+        <textarea placeholder="Tell us your question or share your healing story..."></textarea>
+        <button type="submit" class="btn btn-primary" style="width:100%;text-align:center">Send Message</button>
+      </form>
+    </div>
+
+    <div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:28px;margin-bottom:24px;">Other Ways to Reach Us</h2>
+      <div class="contact-info">
+        <div class="c-info-item">
+          <div class="c-info-icon">📧</div>
+          <div>
+            <h4>Email Us</h4>
+            <p>hello@naturecure.in</p>
+            <p style="font-size:12px;color:#888;margin-top:4px">We respond within 24 hours</p>
+          </div>
+        </div>
+        <div class="c-info-item">
+          <div class="c-info-icon">💬</div>
+          <div>
+            <h4>WhatsApp Community</h4>
+            <p>Join our healing community group</p>
+            <p style="font-size:12px;color:#888;margin-top:4px">1200+ members sharing stories</p>
+          </div>
+        </div>
+        <div class="c-info-item">
+          <div class="c-info-icon">📍</div>
+          <div>
+            <h4>Based In</h4>
+            <p>India — serving the world</p>
+            <p style="font-size:12px;color:#888;margin-top:4px">Content available in English & Hindi</p>
+          </div>
+        </div>
+        <div class="c-info-item">
+          <div class="c-info-icon">📖</div>
+          <div>
+            <h4>Share Your Story</h4>
+            <p>Healed naturally? Tell us — we'll feature your story to inspire others.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer-bar">
+    <div class="container">
+      <p>⚠️ <strong>Disclaimer:</strong> NatureCure does not provide personalised medical advice. For specific health conditions, always consult a qualified healthcare professional.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo">✦ NatureCure</div><p>Bringing ancient healing wisdom to the modern world.</p></div>
+        <div class="footer-col"><h4>Pages</h4><ul>
+          <li><a href="herbs.html">Herbs</a></li><li><a href="remedies.html">Remedies</a></li>
+          <li><a href="exercises.html">Exercises</a></li><li><a href="diet.html">Diet</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="contact.html">Contact</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 NatureCure. Made with 🌿 for a healthier world.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

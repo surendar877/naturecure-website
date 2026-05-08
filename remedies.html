@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natural Remedies — NatureCure</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-leaf">✦</span> NatureCure</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="herbs.html">Herbs</a></li>
+        <li><a href="remedies.html" class="active">Remedies</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="diet.html">Diet</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-tag">Nature's Pharmacy</p>
+    <h1>Natural Home Remedies</h1>
+    <p>Simple, proven remedies using herbs, spices and kitchen ingredients for every common health problem</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="diabetes">Diabetes</button>
+    <button class="filter-btn" data-filter="bp">High BP</button>
+    <button class="filter-btn" data-filter="cold">Cold & Cough</button>
+    <button class="filter-btn" data-filter="pcos">PCOS</button>
+    <button class="filter-btn" data-filter="sleep">Sleep</button>
+    <button class="filter-btn" data-filter="hairfall">Hair Fall</button>
+    <button class="filter-btn" data-filter="digestion">Digestion</button>
+    <button class="filter-btn" data-filter="skin">Skin</button>
+    <button class="filter-btn" data-filter="joint">Joint Pain</button>
+  </div>
+
+  <div class="container section" style="padding-top:0">
+    <div class="remedies-grid" id="remediesGrid"></div>
+  </div>
+
+  <div class="disclaimer-bar">
+    <div class="container">
+      <p>⚠️ <strong>Disclaimer:</strong> These remedies are informational. Always consult your doctor before changing any treatment plan.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo">✦ NatureCure</div><p>Bringing ancient healing wisdom to the modern world.</p></div>
+        <div class="footer-col"><h4>Pages</h4><ul>
+          <li><a href="herbs.html">Herbs</a></li><li><a href="remedies.html">Remedies</a></li>
+          <li><a href="exercises.html">Exercises</a></li><li><a href="diet.html">Diet</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="contact.html">Contact</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 NatureCure. Made with 🌿 for a healthier world.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const remedies = [
+      { id:'diabetes', emoji:'🩸', tag:'Kitchen Remedy', title:'Bitter Gourd + Fenugreek Combo', condition:'Type 2 Diabetes', category:'diabetes', desc:'Drink 50ml karela juice mixed with soaked methi water every morning on empty stomach. Shown to lower fasting blood sugar significantly within 30 days.', ingredients:['Bitter Gourd','Fenugreek Seeds','Cinnamon','Water'] },
+      { id:'bp', emoji:'🫀', tag:'Herb Remedy', title:'Garlic + Honey Morning Tonic', condition:'High Blood Pressure', category:'bp', desc:'Crush 2–3 raw garlic cloves, mix with 1 tsp raw honey and eat every morning. Allicin in garlic is a natural ACE inhibitor that relaxes blood vessels.', ingredients:['Raw Garlic','Raw Honey','Lemon Juice'] },
+      { id:'cold', emoji:'🤧', tag:'Home Remedy', title:'Ginger-Lemon-Honey Tea', condition:'Cold & Cough', category:'cold', desc:'Boil 1 inch ginger in 2 cups water for 10 mins. Add lemon juice and honey. Drink 3x daily. Clears congestion and kills throat bacteria within 48 hours.', ingredients:['Fresh Ginger','Lemon','Honey','Tulsi Leaves'] },
+      { id:'pcos', emoji:'🌸', tag:'Herb Tea', title:'Spearmint + Cinnamon Tea', condition:'PCOS & Hormonal Imbalance', category:'pcos', desc:'2 cups spearmint tea daily reduces excess androgens (male hormones) in women. Add cinnamon to regulate insulin — a key driver of PCOS.', ingredients:['Spearmint Leaves','Cinnamon','Fenugreek','Warm Water'] },
+      { id:'sleep', emoji:'🌙', tag:'Night Remedy', title:'Ashwagandha Golden Milk', condition:'Insomnia & Poor Sleep', category:'sleep', desc:'Warm milk with ashwagandha, turmeric and a pinch of nutmeg 30 mins before bed. Reduces cortisol and prepares nervous system for deep sleep.', ingredients:['Ashwagandha','Turmeric','Nutmeg','Warm Milk','Honey'] },
+      { id:'hairfall', emoji:'💆', tag:'Oil Remedy', title:'Onion Juice + Coconut Oil', condition:'Hair Fall & Thin Hair', category:'hairfall', desc:'Apply onion juice mixed with coconut oil to scalp, leave 30 mins, wash off. Sulfur in onion juice boosts keratin production and kills follicle-damaging bacteria.', ingredients:['Onion Juice','Coconut Oil','Castor Oil','Fenugreek Paste'] },
+      { id:'digestion', emoji:'🫙', tag:'Spice Remedy', title:'Jeera (Cumin) Water', condition:'Bloating & Poor Digestion', category:'digestion', desc:'Boil 1 tsp cumin seeds in 2 cups water for 5 mins. Drink warm after meals. Activates digestive enzymes and relieves IBS, bloating and acidity.', ingredients:['Cumin Seeds','Fennel Seeds','Ajwain','Water'] },
+      { id:'skin', emoji:'✨', tag:'Face Remedy', title:'Turmeric-Honey Face Pack', condition:'Acne & Skin Glow', category:'skin', desc:'Mix 1/2 tsp turmeric with 1 tsp raw honey and apply to face for 15 mins. Kills acne bacteria, reduces redness and gives natural glow.', ingredients:['Turmeric','Raw Honey','Neem Powder','Rose Water'] },
+      { id:'joint', emoji:'🦵', tag:'Massage Remedy', title:'Castor Oil + Ginger Compress', condition:'Joint Pain & Arthritis', category:'joint', desc:'Warm castor oil massage on joints followed by a hot ginger compress. Ricinoleic acid in castor oil is a proven anti-inflammatory absorbed through skin.', ingredients:['Castor Oil','Ginger','Eucalyptus Oil','Warm Compress'] },
+      { id:'acidity', emoji:'🔥', tag:'Quick Remedy', title:'Aloe Vera + Coconut Water', condition:'Acid Reflux & GERD', category:'digestion', desc:'30ml fresh aloe vera gel mixed in coconut water, taken 20 mins before meals. Soothes the stomach lining and neutralizes acid naturally.', ingredients:['Aloe Vera Gel','Coconut Water','Fennel Seeds'] },
+      { id:'headache', emoji:'🤕', tag:'Pressure Point', title:'Peppermint Oil + Ginger Tea', condition:'Headache & Migraine', category:'cold', desc:'Apply diluted peppermint oil to temples and drink strong ginger tea. Peppermint has been shown to work as well as paracetamol for tension headaches.', ingredients:['Peppermint Oil','Ginger','Lavender Oil','Water'] },
+      { id:'immunity', emoji:'🛡️', tag:'Daily Tonic', title:'Kadha — Immunity Booster', condition:'Weak Immunity', category:'cold', desc:'Boil tulsi, ginger, black pepper, cinnamon and cloves together for 10 mins. Strain and drink daily. The ultimate Ayurvedic immunity drink.', ingredients:['Tulsi','Ginger','Black Pepper','Cinnamon','Cloves','Honey'] },
+    ];
+
+    const grid = document.getElementById('remediesGrid');
+    remedies.forEach(r => {
+      grid.innerHTML += `
+        <div class="remedy-card" data-category="${r.category}" id="${r.id}">
+          <div class="remedy-header">
+            <div class="remedy-emoji">${r.emoji}</div>
+            <span class="remedy-tag">${r.tag}</span>
+          </div>
+          <div class="remedy-body">
+            <p class="remedy-condition">${r.condition}</p>
+            <h3>${r.title}</h3>
+            <p>${r.desc}</p>
+            <div class="remedy-ingredients">${r.ingredients.map(i=>`<span>${i}</span>`).join('')}</div>
+          </div>
+        </div>
+      `;
+    });
+
+    // Handle search param
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('search');
+    if (q) {
+      const all = document.querySelectorAll('.remedy-card');
+      all.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(q.toLowerCase()) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

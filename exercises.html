@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yoga & Exercise — NatureCure</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo"><span class="logo-leaf">✦</span> NatureCure</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="herbs.html">Herbs</a></li>
+        <li><a href="remedies.html">Remedies</a></li>
+        <li><a href="exercises.html" class="active">Exercises</a></li>
+        <li><a href="diet.html">Diet</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-tag">Move to Heal</p>
+    <h1>Yoga & Natural Exercise</h1>
+    <p>Condition-specific routines that heal your body without medication — backed by science and ancient wisdom</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="diabetes">Diabetes</button>
+    <button class="filter-btn" data-filter="bp">Blood Pressure</button>
+    <button class="filter-btn" data-filter="stress">Stress & Anxiety</button>
+    <button class="filter-btn" data-filter="pcos">PCOS</button>
+    <button class="filter-btn" data-filter="back">Back Pain</button>
+    <button class="filter-btn" data-filter="thyroid">Thyroid</button>
+    <button class="filter-btn" data-filter="weight">Weight Loss</button>
+  </div>
+
+  <div class="container section" style="padding-top:0">
+    <div class="remedies-grid" id="exerciseGrid"></div>
+  </div>
+
+  <div class="disclaimer-bar">
+    <div class="container">
+      <p>⚠️ <strong>Disclaimer:</strong> Always listen to your body. Stop any exercise that causes pain and consult a physiotherapist or doctor for chronic conditions.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="logo">✦ NatureCure</div><p>Bringing ancient healing wisdom to the modern world.</p></div>
+        <div class="footer-col"><h4>Pages</h4><ul>
+          <li><a href="herbs.html">Herbs</a></li><li><a href="remedies.html">Remedies</a></li>
+          <li><a href="exercises.html">Exercises</a></li><li><a href="diet.html">Diet</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="contact.html">Contact</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 NatureCure. Made with 🌿 for a healthier world.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const exercises = [
+      { emoji:'🧘', name:'Anulom Vilom Pranayama', condition:'Stress, Anxiety & High BP', category:'stress bp', duration:'20 min', freq:'Daily', steps:['Sit comfortably with spine straight','Close right nostril with thumb, inhale slowly through left nostril for 4 counts','Close left nostril with ring finger, exhale through right for 4 counts','Repeat in reverse — inhale right, exhale left','This is one cycle. Do 10 cycles, rest 1 minute, repeat.'], desc:'Alternate nostril breathing activates the parasympathetic nervous system. Studies show it reduces systolic BP by 10–15 points within 8 weeks.' },
+      { emoji:'🏃', name:'Bhujangasana (Cobra Pose)', condition:'Back Pain & Thyroid', category:'back thyroid', duration:'10 min', freq:'Daily', steps:['Lie face down on mat, palms beside chest','Press into palms and slowly lift chest off ground','Keep elbows slightly bent, neck neutral','Hold for 15–30 seconds, breathe deeply','Lower down and rest. Repeat 5 times.'], desc:'Stimulates the thyroid gland by compressing and releasing the throat area. Simultaneously strengthens spine muscles and relieves chronic back pain.' },
+      { emoji:'🦶', name:'Diabetes Yoga Routine', condition:'Type 2 Diabetes', category:'diabetes', duration:'30 min', freq:'Daily AM', steps:['5 mins Mandukasana (frog pose) — compresses pancreas stimulating insulin','10 mins Pranayama — improves cellular glucose uptake','5 mins Paschimottanasana — stretches and activates abdominal organs','10 mins walking at brisk pace after breakfast','Track blood sugar before and after for motivation'], desc:'This combination has shown blood sugar reduction of 15–25 mg/dL within 30 days in multiple Indian studies. Works best when done before breakfast.' },
+      { emoji:'🌊', name:'Bhramari Pranayama', condition:'Anxiety, Insomnia & Migraines', category:'stress', duration:'10 min', freq:'Daily evening', steps:['Sit straight, close eyes, relax shoulders','Place index fingers gently on closed eyelids','Thumbs on ear cartilage to close ears','Inhale deeply through nose','Exhale making a humming sound like a bee','Feel the vibration in head. 10 rounds.'], desc:'The humming vibration stimulates the vagus nerve, instantly activating the relaxation response. Proven to reduce anxiety by 44% in clinical trials.' },
+      { emoji:'🤸', name:'PCOS Healing Routine', condition:'PCOS & Hormonal Balance', category:'pcos', duration:'40 min', freq:'5x per week', steps:['10 mins brisk walking to reduce insulin resistance','Baddha Konasana (butterfly pose) 5 mins — stimulates ovaries','Supta Baddha Konasana 5 mins — opens reproductive area','15 mins strength training — reduces testosterone naturally','5 mins Shavasana with deep breathing'], desc:'Reducing insulin resistance through movement is the #1 natural treatment for PCOS. Combined with diet, this routine restores hormonal balance in 3–6 months.' },
+      { emoji:'🏋️', name:'Surya Namaskar (Sun Salutation)', condition:'Weight Loss & Full Body Health', category:'weight', duration:'30 min', freq:'Daily AM', steps:['Start in Pranamasana (prayer pose)','Inhale — Hastauttanasana (arms up)','Exhale — Hasta Padasana (forward fold)','Inhale — Ashwa Sanchalanasana (lunge)','Hold — Dandasana (plank)','Continue 12-step flow × 12 rounds'], desc:'12 rounds of Surya Namaskar burns 150–200 calories, works all 72,000 nadis (energy channels) and is the most complete natural workout system in existence.' },
+      { emoji:'💪', name:'Setu Bandhasana (Bridge Pose)', condition:'Thyroid & Lower Back Pain', category:'thyroid back', duration:'10 min', freq:'Daily', steps:['Lie on back, knees bent, feet flat on floor','Arms beside body, palms down','Press feet into ground and lift hips up','Clasp hands under body and breathe','Hold 30–60 seconds. Lower slowly.','Repeat 5–8 times'], desc:'Bridge pose applies direct pressure to the thyroid gland in the neck while strengthening the lower back. Excellent for hypothyroidism recovery.' },
+      { emoji:'🧘', name:'Kapalbhati Pranayama', condition:'Weight Loss, Digestion & Energy', category:'weight', duration:'15 min', freq:'Daily AM', steps:['Sit cross-legged, spine erect','Inhale naturally through both nostrils','Exhale forcefully through nose, pulling belly in sharply','Let the inhale happen passively','Maintain rhythm: 60–120 strokes per minute','Start with 5 mins, build to 15 mins'], desc:'Kapalbhati generates massive internal heat, massages abdominal organs, stimulates the liver and pancreas, and is shown to reduce belly fat over 3 months.' },
+    ];
+
+    const grid = document.getElementById('exerciseGrid');
+    exercises.forEach(ex => {
+      grid.innerHTML += `
+        <div class="exercise-card" data-category="${ex.category}">
+          <div class="exercise-header">
+            <div class="exercise-icon">${ex.emoji}</div>
+            <div>
+              <h3>${ex.name}</h3>
+              <span>${ex.condition}</span>
+            </div>
+          </div>
+          <div class="exercise-body">
+            <div class="exercise-meta">
+              <div class="e-meta"><strong>${ex.duration}</strong>Duration</div>
+              <div class="e-meta"><strong>${ex.freq}</strong>Frequency</div>
+            </div>
+            <p style="margin-top:12px">${ex.desc}</p>
+            <ul class="steps-list">
+              ${ex.steps.map((s,i)=>`<li><span class="sn">${i+1}</span>${s}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

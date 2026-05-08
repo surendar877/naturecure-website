@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NatureCure — Heal Naturally</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-leaf">✦</span> NatureCure
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="herbs.html">Herbs</a></li>
+        <li><a href="remedies.html">Remedies</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="diet.html">Diet</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-tag">100% Natural • No Side Effects</span>
+      <h1 class="hero-title">Nature Has A Cure<br /><em>For Everything</em></h1>
+      <p class="hero-sub">Discover ancient herbs, home remedies, healing foods and yoga routines — proven alternatives to everyday medicines.</p>
+      <div class="hero-btns">
+        <a href="remedies.html" class="btn btn-primary">Explore Remedies</a>
+        <a href="herbs.html" class="btn btn-outline">Browse Herbs</a>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <div class="plant-ring">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="center-leaf">🌿</div>
+        <span class="orbit-item o1">🌱</span>
+        <span class="orbit-item o2">🍋</span>
+        <span class="orbit-item o3">🧄</span>
+        <span class="orbit-item o4">🌸</span>
+        <span class="orbit-item o5">🍃</span>
+        <span class="orbit-item o6">🫚</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH BAR -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search remedy, herb or condition (e.g. diabetes, headache, cough)..." />
+        <button onclick="doSearch()" class="search-btn">Search</button>
+      </div>
+      <div class="popular-tags">
+        <span>Popular:</span>
+        <a href="remedies.html#diabetes">Diabetes</a>
+        <a href="remedies.html#bp">High BP</a>
+        <a href="remedies.html#cold">Cold & Cough</a>
+        <a href="remedies.html#pcos">PCOS</a>
+        <a href="remedies.html#hairfall">Hair Fall</a>
+        <a href="remedies.html#sleep">Sleep</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Explore By Type</p>
+        <h2>What Are You Looking For?</h2>
+      </div>
+      <div class="cat-grid">
+        <a href="herbs.html" class="cat-card">
+          <div class="cat-icon">🌿</div>
+          <h3>Herbs & Plants</h3>
+          <p>Tulsi, Neem, Ashwagandha, Giloy and 50+ healing herbs explained</p>
+          <span class="cat-count">50+ Herbs</span>
+        </a>
+        <a href="remedies.html" class="cat-card">
+          <div class="cat-icon">🏠</div>
+          <h3>Home Remedies</h3>
+          <p>Kitchen ingredients that cure — ginger, turmeric, honey and more</p>
+          <span class="cat-count">80+ Remedies</span>
+        </a>
+        <a href="exercises.html" class="cat-card">
+          <div class="cat-icon">🧘</div>
+          <h3>Yoga & Exercise</h3>
+          <p>Condition-specific yoga poses and exercise routines that heal</p>
+          <span class="cat-count">30+ Routines</span>
+        </a>
+        <a href="diet.html" class="cat-card">
+          <div class="cat-icon">🥗</div>
+          <h3>Healing Foods</h3>
+          <p>Anti-inflammatory diets, superfoods, and meal plans for every illness</p>
+          <span class="cat-count">40+ Diets</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED REMEDIES -->
+  <section class="featured section bg-cream">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Most Searched</p>
+        <h2>Top Natural Remedies</h2>
+      </div>
+      <div class="remedies-grid" id="remediesGrid"></div>
+      <div class="center-btn">
+        <a href="remedies.html" class="btn btn-primary">View All Remedies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Simple Process</p>
+        <h2>How To Use This Website</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Find Your Condition</h3>
+          <p>Search or browse by illness, symptom or body part to find relevant remedies.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Choose Your Method</h3>
+          <p>Pick from herbs, home remedies, yoga routines or healing diet plans.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Follow The Guide</h3>
+          <p>Step-by-step instructions with dosage, timing and preparation methods.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>Heal Naturally</h3>
+          <p>Track your progress and combine methods for the best results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERBS SPOTLIGHT -->
+  <section class="herbs-spotlight section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Ancient Wisdom</p>
+        <h2>Herb of the Week</h2>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-left">
+          <div class="herb-badge">🌿 Featured Herb</div>
+          <h2>Ashwagandha</h2>
+          <p class="herb-latin"><em>Withania somnifera</em></p>
+          <p class="herb-desc">Known as Indian Ginseng, Ashwagandha is one of the most powerful herbs in Ayurvedic medicine. It has been used for over 3,000 years to relieve stress, increase energy levels, and improve concentration.</p>
+          <div class="herb-benefits">
+            <span>✓ Reduces Cortisol</span>
+            <span>✓ Boosts Testosterone</span>
+            <span>✓ Fights Anxiety</span>
+            <span>✓ Improves Sleep</span>
+            <span>✓ Builds Strength</span>
+          </div>
+          <a href="herbs.html#ashwagandha" class="btn btn-primary">Learn More</a>
+        </div>
+        <div class="spotlight-right">
+          <div class="herb-visual">🌿</div>
+          <div class="herb-stats">
+            <div class="h-stat"><span class="h-stat-val">3000+</span><span class="h-stat-label">Years of use</span></div>
+            <div class="h-stat"><span class="h-stat-val">12+</span><span class="h-stat-label">Benefits proven</span></div>
+            <div class="h-stat"><span class="h-stat-val">0</span><span class="h-stat-label">Side effects (normal dose)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section bg-cream">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Real Stories</p>
+        <h2>People Who Healed Naturally</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"I was taking 3 medicines daily for high BP. After following the diet plan and doing pranayama for 60 days, my BP is normal. No medicines now."</p>
+          <div class="testi-author"><strong>Rajesh Kumar</strong> <span>Delhi, India</span></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"My PCOS was causing irregular periods for 2 years. The Spearmint tea + yoga routine from this site gave me results in just 45 days."</p>
+          <div class="testi-author"><strong>Priya Sharma</strong> <span>Bangalore</span></div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Ashwagandha and proper sleep routine cured my anxiety that 6 months of antidepressants could not fix. Nature is truly the best doctor."</p>
+          <div class="testi-author"><strong>Amit Verma</strong> <span>Mumbai</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="disclaimer-bar">
+    <div class="container">
+      <p>⚠️ <strong>Disclaimer:</strong> All content on NatureCure is for informational purposes only. Always consult a qualified healthcare provider before changing or stopping any medical treatment. Natural remedies complement — not replace — professional medical advice.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">✦ NatureCure</div>
+          <p>Bringing ancient healing wisdom to the modern world. Herbs, remedies, yoga and diet — all in one place.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="herbs.html">Herbs & Plants</a></li>
+            <li><a href="remedies.html">Home Remedies</a></li>
+            <li><a href="exercises.html">Yoga & Exercise</a></li>
+            <li><a href="diet.html">Healing Diet</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Conditions</h4>
+          <ul>
+            <li><a href="remedies.html#diabetes">Diabetes</a></li>
+            <li><a href="remedies.html#bp">High Blood Pressure</a></li>
+            <li><a href="remedies.html#pcos">PCOS</a></li>
+            <li><a href="remedies.html#cold">Cold & Cough</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 NatureCure. Made with 🌿 for a healthier world.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
